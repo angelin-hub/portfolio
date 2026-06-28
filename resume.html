@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracy Angelin.V — Resume</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 32px 40px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header { text-align: center; margin-bottom: 14px; }
+    .header h1 { font-size: 26px; font-weight: 700; color: #111; letter-spacing: 0.5px; }
+    .contact-line {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin-top: 6px;
+      font-size: 12.5px;
+      color: #333;
+    }
+    .contact-line span { display: flex; align-items: center; gap: 4px; }
+    .divider { border: none; border-top: 1.5px solid #1b4d3e; margin: 12px 0; }
+
+    /* Section */
+    .section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1b4d3e;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 14px;
+      background: #1b4d3e;
+      border-radius: 2px;
+    }
+
+    /* Career Objective */
+    .objective p {
+      color: #333;
+      line-height: 1.65;
+      font-size: 12.5px;
+    }
+
+    /* Education */
+    .edu-card {
+      background: #f4f8f5;
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .edu-degree { font-weight: 700; font-size: 13px; color: #111; }
+    .edu-institute { color: #444; font-size: 12.5px; margin-top: 2px; }
+    .edu-cgpa { color: #555; font-size: 12px; margin-top: 2px; }
+    .edu-date { font-size: 12px; color: #666; white-space: nowrap; }
+
+    /* Projects */
+    .project { margin-bottom: 14px; }
+    .project-title { font-weight: 700; font-size: 13px; color: #111; margin-bottom: 3px; }
+    .project-desc { color: #444; line-height: 1.6; font-size: 12.5px; margin-bottom: 6px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag {
+      background: #e8f5e9;
+      color: #1b4d3e;
+      border: 1px solid #c8e6c9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    /* Skills */
+    .skill-block { margin-bottom: 8px; }
+    .skill-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1b4d3e;
+      margin-bottom: 5px;
+    }
+
+    /* Certifications & Achievements */
+    ul { padding-left: 18px; }
+    ul li { color: #333; line-height: 1.7; font-size: 12.5px; }
+
+    @media print {
+      body { padding: 20px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Gracy Angelin.V</h1>
+    <div class="contact-line">
+      <span>✉ angelinchrist76@gmail.com</span>
+      <span>📞 9566409117</span>
+      <span>📍 Madurai, India</span>
+      <span>🔗 linkedin.com/in/gracy-angelin-a2737737a</span>
+    </div>
+  </div>
+  <hr class="divider" />
+
+  <!-- Career Objective -->
+  <div class="section objective">
+    <div class="section-title">Career Objective</div>
+    <p>
+      Motivated and detail-oriented Computer Science student with a strong foundation in Python programming,
+      IoT, Computer Organization, and Artificial Intelligence concepts. Experienced in developing academic
+      projects such as Privacy-Aware AI Model Sharing in Healthcare IoT Systems and Memory Architecture &amp;
+      Dynamic Allocation Simulator. Skilled in problem-solving, dynamic memory allocation techniques,
+      federated learning, MQTT communication, and system performance analysis. Even in the first year of
+      engineering, actively explored advanced technical domains and successfully completed innovative projects,
+      with a strong passion to learn and achieve much more in the coming years. Eager to enhance technical
+      expertise, work on real-world technologies, and contribute effectively to a growth-oriented organization
+      in the IT industry.
+    </p>
+  </div>
+  <hr class="divider" />
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-card">
+      <div>
+        <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
+        <div class="edu-institute">Karunya Institute of Technology and Sciences, Madurai, India</div>
+        <div class="edu-cgpa">Currently: 2nd Year &nbsp;|&nbsp; CGPA: 6</div>
+      </div>
+      <div class="edu-date">July 2024 – Present</div>
+    </div>
+  </div>
+  <hr class="divider" />
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-title">Privacy-Aware AI Model Sharing in IoT Healthcare Systems</div>
+      <div class="project-desc">
+        Developed a secure IoT-based healthcare framework using Federated Learning to enable AI model sharing
+        without exposing sensitive patient data. Implemented MQTT-based secure communication, trust-based
+        device evaluation, anomaly detection, and a self-destruct security mechanism to prevent cyberattacks
+        and data breaches in healthcare IoT systems.
+      </div>
+      <div class="tags">
+        <span class="tag">IoT</span><span class="tag">ESP32</span><span class="tag">Federated Learning</span>
+        <span class="tag">MQTT Protocol</span><span class="tag">Python</span><span class="tag">InfluxDB</span>
+        <span class="tag">Grafana</span><span class="tag">AI / Machine Learning</span><span class="tag">Edge Computing</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Memory Architecture and Dynamic Allocation Simulator</div>
+      <div class="project-desc">
+        Developed an interactive simulator to demonstrate memory architecture concepts and dynamic memory
+        allocation techniques such as First Fit, Best Fit, Worst Fit, and Next Fit. Implemented CPU instruction
+        cycle simulation, interrupt handling, and performance evaluation metrics including cache hit rate, CPI,
+        and throughput to analyze system efficiency.
+      </div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Computer Organization &amp; Architecture</span>
+        <span class="tag">Dynamic Memory Allocation</span><span class="tag">CPU Scheduling Concepts</span>
+        <span class="tag">Cache Memory</span><span class="tag">Interrupt Handling</span>
+        <span class="tag">Data Structures</span><span class="tag">Algorithms</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Smart Alarm Scheduler using Python</div>
+      <div class="project-desc">
+        Developed a Smart Alarm Scheduler desktop application using Python and Tkinter that allows users to add,
+        update, and delete reminders with alarm notifications. Implemented CRUD operations using file handling
+        and database storage for managing reminder data efficiently. Added automatic popup alerts, daily reminder
+        highlights, and an easy-to-use GUI for task scheduling.
+      </div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Tkinter</span>
+        <span class="tag">MySQL/SQLite</span><span class="tag">File Handling</span>
+        <span class="tag">Datetime</span>
+      </div>
+    </div>
+  </div>
+  <hr class="divider" />
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+
+    <div class="skill-block">
+      <div class="skill-label">Technical</div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">C Programming</span>
+        <span class="tag">MySQL / SQLite</span><span class="tag">Tkinter</span>
+        <span class="tag">File Handling</span><span class="tag">CRUD Operations</span>
+        <span class="tag">Database Management</span><span class="tag">IoT Basics</span>
+        <span class="tag">GitHub</span><span class="tag">Web Development</span>
+      </div>
+    </div>
+
+    <div class="skill-block" style="margin-top:8px;">
+      <div class="skill-label">Soft Skills</div>
+      <div class="tags">
+        <span class="tag">Communication</span><span class="tag">Teamwork</span>
+        <span class="tag">Problem Solving</span><span class="tag">Time Management</span>
+      </div>
+    </div>
+
+    <div class="skill-block" style="margin-top:8px;">
+      <div class="skill-label">Languages</div>
+      <div class="tags">
+        <span class="tag">Tamil</span><span class="tag">English</span>
+      </div>
+    </div>
+  </div>
+  <hr class="divider" />
+
+  <!-- Certifications -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <ul>
+      <li>Python Essentials – Cisco Networking Academy</li>
+      <li>CSS Essentials – Cisco Networking Academy</li>
+      <li>HTML Essentials – Cisco Networking Academy</li>
+      <li>GitHub Copilot Fundamentals – Simplilearn SkillUp</li>
+      <li>Introduction to Generative AI Studio – Google Cloud &amp; Simplilearn SkillUp</li>
+    </ul>
+  </div>
+  <hr class="divider" />
+
+  <!-- Achievements -->
+  <div class="section">
+    <div class="section-title">Achievements</div>
+    <ul>
+      <li>Developed Smart Alarm Scheduler using Python</li>
+      <li>Built Privacy-Aware AI Model Sharing Project</li>
+    </ul>
+  </div>
+
+</body>
+</html>
