@@ -131,21 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .to('#hero-stats',        { opacity: 1, duration: 0.7 }, 1.35)
       .from('#hero-stats',      { y: 20 }, 1.35);
 
-    // Parallax on scroll (if ScrollTrigger available)
-    if (typeof ScrollTrigger !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.to('.hero-cin-content', {
-        y: -80,
-        opacity: 0,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-        },
-      });
-    }
+    // Parallax on scroll removed — was causing content to disappear
   })();
 
   /* ── Video Controls ──────────────────────────────────── */
