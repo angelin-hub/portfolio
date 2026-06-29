@@ -114,22 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.to('.hero-cin-content',  { opacity: 1, duration: 0.01 }, 0)
-      .from('.hero-video-main', { opacity: 0, scale: 1.06, duration: 1.8, ease: 'power2.out' }, 0)
-      .to('#hero-tag',          { opacity: 1, y: 0, duration: 0.7 }, 0.4)
-      .from('#hero-tag',        { y: 30 }, 0.4)
-      .to('#hero-name',         { opacity: 1, duration: 0.9 }, 0.65)
-      .from('#hero-name',       { y: 50, skewY: 3 }, 0.65)
-      .to('#hero-role',         { opacity: 1, duration: 0.7 }, 0.9)
-      .from('#hero-role',       { y: 20 }, 0.9)
-      .to('#hero-sub',          { opacity: 1, duration: 0.7 }, 1.05)
-      .from('#hero-sub',        { y: 20 }, 1.05)
-      .to('#hero-actions',      { opacity: 1, duration: 0.7 }, 1.2)
-      .from('#hero-actions',    { y: 20 }, 1.2)
-      .to('#hero-scroll',       { opacity: 1, duration: 0.7 }, 1.5)
-      .to('#hero-controls',     { opacity: 1, duration: 0.6 }, 1.6)
-      .to('#hero-stats',        { opacity: 1, duration: 0.7 }, 1.35)
-      .from('#hero-stats',      { y: 20 }, 1.35);
+    tl.from('.hero-video-main', { opacity: 0, scale: 1.06, duration: 1.8, ease: 'power2.out' }, 0)
+      .from('#hero-tag',   { opacity: 0, y: 30, duration: 0.7 }, 0.4)
+      .from('#hero-name',  { opacity: 0, y: 50, skewY: 3, duration: 0.9 }, 0.65)
+      .from('#hero-role',  { opacity: 0, y: 20, duration: 0.7 }, 0.9)
+      .from('#hero-sub',   { opacity: 0, y: 20, duration: 0.7 }, 1.05)
+      .from('#hero-actions', { opacity: 0, y: 20, duration: 0.7 }, 1.2)
+      .from('#hero-stats',   { opacity: 0, y: 20, duration: 0.7 }, 1.35)
+      .from('#hero-scroll',  { opacity: 0, duration: 0.7 }, 1.5);
 
     // Parallax on scroll removed — was causing content to disappear
   })();
