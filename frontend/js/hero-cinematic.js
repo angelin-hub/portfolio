@@ -127,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .to('#hero-actions',      { opacity: 1, duration: 0.7 }, 1.2)
       .from('#hero-actions',    { y: 20 }, 1.2)
       .to('#hero-scroll',       { opacity: 1, duration: 0.7 }, 1.5)
-      .to('#hero-controls',     { opacity: 1, duration: 0.6 }, 1.6);
+      .to('#hero-controls',     { opacity: 1, duration: 0.6 }, 1.6)
+      .to('#hero-stats',        { opacity: 1, duration: 0.7 }, 1.35)
+      .from('#hero-stats',      { y: 20 }, 1.35);
 
     // Parallax on scroll (if ScrollTrigger available)
     if (typeof ScrollTrigger !== 'undefined') {

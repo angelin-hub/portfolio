@@ -1102,14 +1102,13 @@ footer {
   filter: drop-shadow(0 0 20px rgba(232,216,122,0.4));
 }
 
-/* Role */
+/* Role — typed text style */
 .hero-cin-role {
-  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
-  font-weight: 500;
-  color: rgba(255,255,255,0.6);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--accent);
   margin-bottom: 1rem;
+  font-weight: 600;
+  min-height: 1.8rem;
   opacity: 0;
 }
 
