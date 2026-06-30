@@ -126,66 +126,60 @@ function getSampleProjects() {
       title: 'Resume Builder',
       description: 'A web app that lets users create professional resumes instantly. Fill in your details, choose a template, and download a polished PDF — no design skills needed.',
       techStack: ['HTML', 'CSS', 'JavaScript'],
+      imageUrl: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600',
       liveUrl: 'https://verdant-jelly-339373.netlify.app',
       githubUrl: 'https://github.com/angelin-hub/resume-builder.git',
       category: 'Web',
-      status: 'Completed',
-      features: ['Template Selection', 'PDF Download', 'Live Preview'],
     },
     {
       _id: '2',
       title: 'Memory Simulator',
       description: 'An interactive memory management simulator that visualizes how operating systems allocate and deallocate memory. Great for understanding OS concepts hands-on.',
       techStack: ['HTML', 'CSS', 'JavaScript'],
+      imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600',
       liveUrl: 'https://tangerine-genie-378a70.netlify.app/',
       githubUrl: 'https://github.com/angelin-hub/memory-simulator.git',
-      category: 'Systems',
-      status: 'Completed',
-      features: ['First Fit / Best Fit', 'Visual Allocation', 'CPU Simulation'],
+      category: 'Web',
     },
     {
       _id: '3',
       title: 'BlogVerse AI',
-      description: 'An AI-powered blogging platform where users can create, publish, and discover blogs. Features AI-assisted writing, smart content suggestions, and a clean modern reading experience.',
-      techStack: ['React', 'Node.js', 'MongoDB', 'AI/ML', 'Tailwind CSS'],
+      description: 'An AI-powered blogging platform where users can create, publish, and discover blogs. Features AI-assisted writing, smart content suggestions, and a modern reading experience.',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      imageUrl: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600',
       liveUrl: 'https://blogverse-ai.netlify.app/',
       githubUrl: 'https://github.com/angelin-hub/blogverse-ai.git',
       category: 'Full Stack',
-      status: 'Completed',
-      features: ['AI Writing Assistant', 'Blog Publishing', 'Smart Suggestions'],
     },
     {
       _id: '4',
       title: 'TaskFlow AI',
       description: 'A full-stack AI-powered task management app with Kanban board, JWT authentication, productivity scoring, drag-and-drop tasks, and real-time updates via Socket.io.',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT'],
+      techStack: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+      imageUrl: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600',
       liveUrl: 'https://storied-melomakarona-d21a7b.netlify.app',
       githubUrl: 'https://github.com/angelin-hub/taskflow-ai.git',
       category: 'Full Stack',
-      status: 'Completed',
-      features: ['Kanban Board', 'AI Productivity Score', 'Real-time Updates'],
     },
     {
       _id: '5',
       title: 'Privacy-Aware AI Model Sharing',
       description: 'Secure IoT healthcare framework using Federated Learning to share AI models without exposing patient data. Includes MQTT communication and anomaly detection.',
-      techStack: ['Python', 'MQTT', 'Federated Learning', 'IoT', 'InfluxDB'],
+      techStack: ['Python', 'MQTT', 'Federated Learning', 'IoT'],
+      imageUrl: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600',
       liveUrl: '',
       githubUrl: 'https://github.com/angelin-hub',
       category: 'AI/ML',
-      status: 'Completed',
-      features: ['Federated Learning', 'Anomaly Detection', 'Self-Destruct Security'],
     },
     {
       _id: '6',
       title: 'Smart Alarm Scheduler',
       description: 'Desktop application using Python and Tkinter for managing reminders with alarm notifications, CRUD operations, and SQLite database storage.',
-      techStack: ['Python', 'Tkinter', 'SQLite', 'File Handling'],
+      techStack: ['Python', 'Tkinter', 'SQLite'],
+      imageUrl: 'https://images.unsplash.com/photo-1508780709619-79562169bc64?w=600',
       liveUrl: '',
       githubUrl: 'https://github.com/angelin-hub',
       category: 'Desktop',
-      status: 'Completed',
-      features: ['Popup Alerts', 'CRUD Operations', 'Daily Highlights'],
     },
   ];
 }
@@ -198,47 +192,23 @@ function renderProjects(projects) {
   }
 
   grid.innerHTML = projects.map(p => `
-    <article class="gh-card fade-in" role="listitem">
-      <!-- Card Header -->
-      <div class="gh-header">
-        <div class="gh-header-left">
-          <span class="gh-repo-icon">📁</span>
-          <h3 class="gh-title">${escapeHtml(p.title)}</h3>
-          <span class="gh-status ${p.status === 'Completed' ? 'status-done' : 'status-wip'}">
-            <span class="status-dot"></span>${escapeHtml(p.status || 'Active')}
-          </span>
+    <article class="project-card fade-in" role="listitem">
+      <div class="project-img">
+        ${p.imageUrl
+          ? `<img src="${escapeHtml(p.imageUrl)}" alt="${escapeHtml(p.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+          : ''}
+        <div class="project-img-placeholder" ${p.imageUrl ? 'style="display:none"' : ''}>🖥️</div>
+        <div class="project-overlay">
+          ${p.liveUrl ? `<a href="${escapeHtml(p.liveUrl)}" class="overlay-btn" target="_blank" rel="noopener">🚀 Live</a>` : ''}
+          ${p.githubUrl ? `<a href="${escapeHtml(p.githubUrl)}" class="overlay-btn" target="_blank" rel="noopener">⭐ GitHub</a>` : ''}
         </div>
-        <span class="gh-category">${escapeHtml(p.category)}</span>
       </div>
-
-      <!-- Description -->
-      <p class="gh-desc">${escapeHtml(p.description)}</p>
-
-      <!-- Tech Stack -->
-      <div class="gh-section-label">Tech Stack</div>
-      <div class="gh-tech">
-        ${(p.techStack || []).map(t => `<span class="gh-badge">${escapeHtml(t)}</span>`).join('')}
-      </div>
-
-      <!-- Features -->
-      ${p.features && p.features.length ? `
-      <div class="gh-section-label">Features</div>
-      <div class="gh-features">
-        ${p.features.map(f => `<span class="gh-feature">✓ ${escapeHtml(f)}</span>`).join('')}
-      </div>` : ''}
-
-      <!-- Footer Actions -->
-      <div class="gh-footer">
-        <div class="gh-stats">
-          <span class="gh-stat">⭐ Star</span>
-          <span class="gh-stat">🍴 Fork</span>
-        </div>
-        <div class="gh-actions">
-          ${p.liveUrl ? `<a href="${escapeHtml(p.liveUrl)}" class="gh-btn gh-btn-live" target="_blank" rel="noopener">🚀 Live Demo</a>` : ''}
-          ${p.githubUrl ? `<a href="${escapeHtml(p.githubUrl)}" class="gh-btn gh-btn-code" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            GitHub
-          </a>` : ''}
+      <div class="project-body">
+        <div class="project-category">${escapeHtml(p.category)}</div>
+        <h3 class="project-title">${escapeHtml(p.title)}</h3>
+        <p class="project-desc">${escapeHtml(p.description)}</p>
+        <div class="project-tech">
+          ${(p.techStack || []).map(t => `<span class="tech-badge">${escapeHtml(t)}</span>`).join('')}
         </div>
       </div>
     </article>
