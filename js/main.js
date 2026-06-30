@@ -145,6 +145,17 @@ function getSampleProjects() {
     },
     {
       _id: '3',
+      title: 'BlogVerse AI',
+      description: 'An AI-powered blogging platform where users can create, publish, and discover blogs. Features AI-assisted writing, smart content suggestions, and a clean modern reading experience.',
+      techStack: ['React', 'Node.js', 'MongoDB', 'AI/ML', 'Tailwind CSS'],
+      liveUrl: 'https://blogverse-ai.netlify.app/',
+      githubUrl: 'https://github.com/angelin-hub/blogverse-ai.git',
+      category: 'Full Stack',
+      status: 'Completed',
+      features: ['AI Writing Assistant', 'Blog Publishing', 'Smart Suggestions'],
+    },
+    {
+      _id: '4',
       title: 'TaskFlow AI',
       description: 'A full-stack AI-powered task management app with Kanban board, JWT authentication, productivity scoring, drag-and-drop tasks, and real-time updates via Socket.io.',
       techStack: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT'],
@@ -155,7 +166,7 @@ function getSampleProjects() {
       features: ['Kanban Board', 'AI Productivity Score', 'Real-time Updates'],
     },
     {
-      _id: '4',
+      _id: '5',
       title: 'Privacy-Aware AI Model Sharing',
       description: 'Secure IoT healthcare framework using Federated Learning to share AI models without exposing patient data. Includes MQTT communication and anomaly detection.',
       techStack: ['Python', 'MQTT', 'Federated Learning', 'IoT', 'InfluxDB'],
@@ -166,7 +177,7 @@ function getSampleProjects() {
       features: ['Federated Learning', 'Anomaly Detection', 'Self-Destruct Security'],
     },
     {
-      _id: '5',
+      _id: '6',
       title: 'Smart Alarm Scheduler',
       description: 'Desktop application using Python and Tkinter for managing reminders with alarm notifications, CRUD operations, and SQLite database storage.',
       techStack: ['Python', 'Tkinter', 'SQLite', 'File Handling'],
