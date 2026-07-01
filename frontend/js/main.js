@@ -122,6 +122,16 @@ async function fetchProjects() {
 function getSampleProjects() {
   return [
     {
+      _id: '7',
+      title: 'AuraCart',
+      description: 'A modern e-commerce web application with product listings, cart management, and a clean shopping experience. Features responsive design and smooth UI interactions.',
+      techStack: ['React', 'JavaScript', 'CSS', 'Node.js'],
+      imageUrl: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600',
+      liveUrl: 'https://aauracart.netlify.app/',
+      githubUrl: 'https://github.com/angelin-hub/auracart.git',
+      category: 'Full Stack',
+    },
+    {
       _id: '1',
       title: 'Resume Builder',
       description: 'A web app that lets users create professional resumes instantly. Fill in your details, choose a template, and download a polished PDF — no design skills needed.',
